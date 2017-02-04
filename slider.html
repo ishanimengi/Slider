@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <link rel="stylesheet" href="styles/slider.css">
+</head>
+
+<body onload="loadImages(),showSlides(slideIndex)">
+<div class="header">Image Slider</div>
+<div class="slideshow-container" id="slideshow-container">
+
+</div>
+<a class="prev" onclick="plusSlides(-1)">Previous</a>
+<a class="next" onclick="plusSlides(1)">Next</a>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+
+ <select id="selectAnimation"  class = "dropdown" onchange="getSelectedValue()" style="margin-left: 13%;margin-top: 2%">
+   <option selected value="" disabled>Choose an Animation</option>
+  </select>
+
+  <button onclick="applyAnimation()">Apply</button>
+
+  <select id="selectTimeout"  class = "dropdown" onchange="getSelectedValue()" style="margin-left: 3%;margin-top: 2%">
+   <option selected value="5000" disabled>Choose Timeout</option>
+  </select>
+
+  <button onclick="applyTimeOut()">Apply</button>
+
+<script src="scripts/slider.js"></script> 
+
+</body>
+</html>
+
